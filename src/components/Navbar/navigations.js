@@ -1,0 +1,35 @@
+const navigations = [
+    {
+        path:'/',
+        name:'Home'
+    },
+    {
+        path:'/coffee',
+        name:'Coffee'
+    },
+    {
+        path:'/tea',
+        name:'Tea'
+    },
+    {
+        path:'/drinks',
+        name:'Drinks'
+    },
+    {
+        path:'/products',
+        name:'Product'
+    },
+    {
+        path:'/sales',
+        name:'Sales'
+    },
+    {
+        path:'/about',
+        name:'About'
+    },
+    {
+        path:'/card',
+        name:'Card'
+    },
+]
+export default navigations;

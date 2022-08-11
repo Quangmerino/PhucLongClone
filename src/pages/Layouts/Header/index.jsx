@@ -5,7 +5,7 @@ import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
 export default function Header() {
     return (
-        <div className="w-full h-[100px] flex px-[100px] py-[25px] justify-between">
+        <div className="w-full h-[100px] flex px-[150px] py-[25px] justify-between">
             <img src={delivery} alt='delivery'/>
             <img src={logo} alt='logo'/>
             <div className="flex items-center gap-4">

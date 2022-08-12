@@ -9,11 +9,13 @@ import ProductPage from "./pages/Products";
 import SalePage from "./pages/Sales";
 import AboutPage from "./pages/About";
 import CardPage from "./pages/Card";
+import Slide from "./components/Slide";
 
 function App() {
   return (
       <div className="App">
         <Header/>
+        <Slide/>
         <Routes>
           <Route path='/' element={<HomePage/>}/>
           <Route path='/coffee' element={<CoffeePage/>}/>

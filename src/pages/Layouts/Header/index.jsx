@@ -7,7 +7,7 @@ import Navigation from "../../../components/Navbar";
 export default function Header() {
     
     return (
-        <div className="">
+        <div className="fixed top-0 right-0 left-0 z-10 bg-white">
             <div className="w-full h-[80px] flex px-[150px] py-[20px] justify-between">
             <img className='hover:motion-safe:animate-bounce' src={delivery} alt='delivery'/>
             <img src={logo} alt='logo'/>

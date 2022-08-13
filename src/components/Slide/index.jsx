@@ -1,21 +1,13 @@
-import React, { useRef, useState } from "react";
-// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-// import "./styles.css";
-
-// import required modules
 import { Autoplay, Pagination, Navigation } from "swiper";
-
-// import img slide
 import slide1 from "./images/img1.png";
 import slide2 from "./images/img2.jpeg";
 import slide3 from "./images/img3.png";
 import slide4 from "./images/img4.jpeg";
+import { Link } from "@mui/material";
 
 export default function Slide() {
   return (
@@ -35,16 +27,24 @@ export default function Slide() {
         className="mySwiper"
       >
         <SwiperSlide>
-            <img src={slide1} alt=''/>
+          <Link to="/">
+            <img src={slide1} alt="" />
+          </Link>
         </SwiperSlide>
         <SwiperSlide>
-            <img src={slide2} alt=''/>
+          <Link to='/'>
+            <img src={slide2} alt="" />
+          </Link>
         </SwiperSlide>
         <SwiperSlide>
-            <img src={slide3} alt=''/>
+          <Link to='/'>
+            <img src={slide3} alt="" />
+          </Link>
         </SwiperSlide>
         <SwiperSlide>
-            <img src={slide4} alt=''/>
+          <Link to='/'>
+            <img src={slide4} alt="" />
+          </Link>
         </SwiperSlide>
       </Swiper>
     </>

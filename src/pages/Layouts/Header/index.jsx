@@ -1,8 +1,8 @@
 import ButtonComponent from "../../../components/ButtonComponent"
 import delivery from "./images/delivery.png";
-import logo from "./images/logo_2.png"
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import Navigation from "../../../components/Navbar";
+import SlideHeader from "./slide";
 
 export default function Header() {
     
@@ -10,7 +10,7 @@ export default function Header() {
         <div className="fixed top-0 right-0 left-0 z-10 bg-white">
             <div className="w-full h-[80px] flex px-[150px] py-[20px] justify-between">
             <img className='hover:motion-safe:animate-bounce' src={delivery} alt='delivery'/>
-            <img src={logo} alt='logo'/>
+            <SlideHeader/>
             <div className="flex items-center gap-4">
                 <ButtonComponent className='font-bold' name='Đăng nhập'/>
                 <div className="flex items-center">

@@ -9,10 +9,12 @@ import ProductPage from "./pages/Products";
 import SalePage from "./pages/Sales";
 import AboutPage from "./pages/About";
 import CardPage from "./pages/Card";
+import MessageUs from "./components/MessageUs";
+import CallUs from "./components/CallUs";
 
 function App() {
   return (
-    <div className="App">
+    <div className="">
       <Header />
       <main className="mt-[125px]">
         <Routes>
@@ -27,6 +29,8 @@ function App() {
         </Routes>
       </main>
       <Footer />
+      <MessageUs/>
+      <CallUs/>
     </div>
   );
 }

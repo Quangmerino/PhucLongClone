@@ -3,8 +3,8 @@ import Slide from "../../components/Slide";
 import Title from "../../components/Title";
 import { dataHome, cities, dataStore, district } from "./data";
 import ButtonCustom from "../../components/ButtonComponent";
-import StorefrontIcon from "@mui/icons-material/Storefront";
 import { Link } from "react-router-dom";
+import { HomeOutlined } from "@ant-design/icons";
 
 export default function HomePage() {
   useTitle("Phúc Long Coffee & Tea");
@@ -62,12 +62,14 @@ export default function HomePage() {
         <div className="flex flex-col gap-4 mt-10 overflow-auto h-[300px]">
           {dataStore.map((item, index) => {
             return (
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-8">
                 <div className="basis-1/5">
-                  <Link className="text-white" to="">
-                    <StorefrontIcon className="text-white" />
-                    <span>{item.address}</span>
-                    <span className="block w-[400px]">{item.phone}</span>
+                  <Link className="text-white flex gap-2" to="/">
+                    <HomeOutlined className="text-white mt-1" />
+                    <div>
+                      <span>{item.address}</span>
+                      <span className="block w-[400px]">{item.phone}</span>
+                    </div>
                   </Link>
                 </div>
                 <ButtonCustom

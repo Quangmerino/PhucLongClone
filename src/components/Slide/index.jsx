@@ -7,7 +7,7 @@ import slide1 from "./images/img1.png";
 import slide2 from "./images/img2.jpeg";
 import slide3 from "./images/img3.png";
 import slide4 from "./images/img4.jpeg";
-import { Link } from "@mui/material";
+import { Link } from "react-router-dom";
 
 export default function Slide() {
   return (

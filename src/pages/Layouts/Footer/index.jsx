@@ -3,15 +3,13 @@ import ButtonCustom from "../../../components/ButtonComponent";
 import { Link } from "react-router-dom";
 import ButtonComponent from "../../../components/ButtonComponent";
 import accuracyImg from "./images/accuracy.png";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import TwitterIcon from "@mui/icons-material/Twitter";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import YouTubeIcon from "@mui/icons-material/YouTube";
+import { FacebookOutlined, InstagramOutlined, TwitterOutlined, YoutubeOutlined } from "@ant-design/icons";
+import BackToTop from "../../../components/BackToTop";
 
 export default function Footer() {
   return (
     <>
-      <div className="grid grid-cols-2 gap-8 py-8 px-28">
+      <div className="grid grid-cols-2 gap-8 py-8 px-28 relative">
         <div>
           {info.map((item, index) => {
             return (
@@ -38,10 +36,10 @@ export default function Footer() {
             </div>
             <ul>
               <li>
-                <Link to="/">Chính sách đặt hàng</Link>
+                <Link to="/chinh-sach-dat-hang">Chính sách đặt hàng</Link>
               </li>
               <li>
-                <Link to="/">Chính sách bảo mật thông tin</Link>
+                <Link to="/chinh-sach-bao-mat-thong-tin">Chính sách bảo mật thông tin</Link>
               </li>
             </ul>
           </div>
@@ -57,21 +55,22 @@ export default function Footer() {
                 <img className="w-[200px]" src={accuracyImg} alt="" />
             </Link>
             <div className="flex gap-4">
-              <Link to="/">
-                <FacebookIcon className="hover:opacity-60" />
+              <Link to="/phuclongcoffeeendtea">
+                <FacebookOutlined className="hover:opacity-60" style={{fontSize: '20px'}}/>
               </Link>
-              <Link to="/">
-                <TwitterIcon className="hover:opacity-60" />
+              <Link to="/phuclongcoffeeendtea">
+                <TwitterOutlined className="hover:opacity-60" style={{fontSize: '20px'}}/>
               </Link>
-              <Link to="/">
-                <InstagramIcon className="hover:opacity-60" />
+              <Link to="/phuclongcoffeeendtea">
+                <InstagramOutlined className="hover:opacity-60" style={{fontSize: '20px'}}/>
               </Link>
-              <Link to="/">
-                <YouTubeIcon className="hover:opacity-60" />
+              <Link to="/phuclongcoffeeendtea">
+                <YoutubeOutlined className="hover:opacity-60" style={{fontSize: '20px'}}/>
               </Link>
             </div>
           </div>
         </div>
+        <BackToTop/>
       </div>
       <div className="bg-black flex justify-center py-1">
         <span className="text-gray-400">

@@ -4,7 +4,7 @@ import { Autoplay } from "swiper";
 import logo1 from "./images/logo.png";
 import logo2 from "./images/logo1.png";
 import logo3 from "./images/logo2.png";
-import { Link } from "@mui/material";
+import { Link } from "react-router-dom";
 
 export default function SlideHeader() {
   return (

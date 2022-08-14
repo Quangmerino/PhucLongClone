@@ -1,8 +1,8 @@
 import ButtonComponent from "../../../components/ButtonComponent"
 import delivery from "./images/delivery.png";
-import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import Navigation from "../../../components/Navbar";
 import SlideHeader from "./slide";
+import { ShoppingCartOutlined } from "@ant-design/icons";
 
 export default function Header() {
     
@@ -18,9 +18,9 @@ export default function Header() {
                     <ButtonComponent className='pl-2' name='EN'/>
                 </div>
                 <ButtonComponent 
-                    className='px-2 py-1 gap-2 border-2 rounded-md border-green-700 text-green-700' 
+                    className='flex items-center px-2 py-1 gap-2 border-2 rounded-md border-green-700 text-green-700' 
                     name='giỏ hàng' 
-                    icon={<ShoppingCartOutlinedIcon/>}/>
+                    icon={<ShoppingCartOutlined style={{fontSize: '20px'}}/>}/>
             </div>
         </div>
         <Navigation/>

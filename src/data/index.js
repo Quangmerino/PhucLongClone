@@ -1,3 +1,66 @@
+
+export const dataSlideHeader = [
+    {
+        images: '/images/logo.png'
+    },
+    {
+        images: '/images/logo1.png'
+    },
+    {
+        images: '/images/logo2.png'
+    },
+];
+
+export const dataSlide = [
+    {
+        images: '/images/banner1.png'
+    },
+    {
+        images: '/images/banner2.jpeg'
+    },
+    {
+        images: '/images/banner3.png'
+    },
+    {
+        images: '/images/banner4.jpeg'
+    },
+];
+
+export const navigations = [
+    {
+        path:'/',
+        name:'Trang chủ'
+    },
+    {
+        path:'/coffee',
+        name:'Cà phê'
+    },
+    {
+        path:'/tea',
+        name:'Trà'
+    },
+    {
+        path:'/drinks',
+        name:'Thức uống'
+    },
+    {
+        path:'/products',
+        name:'Sản phẩm'
+    },
+    {
+        path:'/sales',
+        name:'Khuyến mãi'
+    },
+    {
+        path:'/about',
+        name:'Về chúng tôi'
+    },
+    {
+        path:'/card',
+        name:'Thẻ'
+    },
+];
+
 export const dataHome = [
     {
         name: 'Xem thêm',
@@ -11,6 +74,36 @@ export const dataHome = [
         img: 'https://phuclong.com.vn/uploads/post/024b7d5e73bbb2-8ed98f521583690431954887e772tuyendung1.jpg',
         des: 'Trong suốt quá trình hoạt động và phát triển, đội ngũ quản lý và nhân viên của Phúc Long Coffee & Tea, qua bao thế hệ, đã cùng nhau xây dựng, nuôi dưỡng niềm đam mê dành cho trà và cà phê với mong muốn được thử thách bản thân trong ngành dịch vụ năng động và sáng tạo.'
     }
+];
+
+export const dataCoffee = [
+    {
+        img: 'https://phuclong.com.vn/upload/files/2/tra%20cafe/c%C3%A0%20ph%C3%AA%20Ph%C3%BAc%20Long%20%C4%91%E1%BA%ADm%20v%E1%BB%8B%203(1).jpg',
+        des: 'Cà phê càng được rang sẫm màu hương vị càng trọn vẹn. Rang cà phê là một quá trình đòi hỏi sự tinh tế từ đôi bàn tay và sự am hiểu từng loại hạt cà phê của người nghệ nhân. Rang lửa nhỏ khiến cà phê chưa chín tới và đắng hơn, trong khi rang quá kỹ lại khiến cà phê cháy khét đánh mất những đặc tính thượng hạng vốn có. Trong quá trình rang đủ thời gian, những dinh dưỡng như proteins, enzymes mới sẽ tích tụ phía trong tạo nên phần chất của cà phê, làm cho cà phê đậm hơn, sánh hơn.'
+    },
+    {
+        img: 'https://phuclong.com.vn/upload/files/2/tra%20cafe/c%C3%A0%20ph%C3%AA%20Ph%C3%BAc%20Long%20%C4%91%E1%BA%ADm%20v%E1%BB%8B%204.jpg',
+        des: 'Trên hành trình tìm kiếm những hạt cà phê ngon nhất, Phúc Long luôn chú trọng bốn đặc tính từ trái cà phê nhằm tôn trọng nguyên bản cho tách cà phê đậm vị. Hương thơm là mùi hương của hạt cà phê - thơm bao nhiêu hứa hẹn cho nhiều vị bấy nhiêu. Thể chất là khái niệm để chỉ độ đậm đà trong nước chiết xuất cà phê. cảm nhận thông qua đánh giá của người thưởng thức. Acid là hợp chất tạo nên vị chua thanh của cà phê. Hậu vị là cảm nhận vị cà phê còn đọng lại sau khi thưởng thức.'
+    },
+    {
+        img: "https://phuclong.com.vn/upload/files/2/tra%20cafe/Dam%20vi%20ca%20phe%203''.jpg",
+        des: 'Tách cà phê hoàn hảo được định nghĩa là tách cà phê có vị đắng đậm đà, chua thanh thoát, lan toả hương thơm nồng nàn, dễ dàng chinh phục vị giác của bất cứ ai. Tách cà phê đậm vị luôn luôn là thức uống giữ vị trí nhất định trong lòng những tín đồ cà phê Việt, dù văn hoá thưởng thức có nhiều thay đổi theo sự phát triển từng ngày của xã hội.'
+    }
+];
+
+export const dataTeaTab1 = [
+    {
+        img: 'https://phuclong.com.vn/upload/files/2/tra%20cafe/tr%C3%A0%20ph%C3%BAc%20long%201.jpg',
+        des: 'Một cây trà nếu được trồng ở những vùng đất có độ cao và khí hậu khác nhau thì sẽ thu được những loại trà cũng khác nhau. Có thể thấy sự phức tạp đến từ phía bên trong, từ những thành phần cũng như cấu tạo hoá học độc nhất vô nhị mà chỉ mình cây trà có được. Thấu hiểu điều đó, để giữ trọn vị tươi nguyên, bảo toàn dưỡng chất tốt nhất, một búp và hai lá non thường được chúng tôi thu hái vào thời điểm sáng sớm. Tiếp đến, quy trình sản xuất để cho ra các sản phẩm trà chất lượng cũng được thực hiện khép kín.',
+    },
+    {
+        img: 'https://phuclong.com.vn/upload/files/2/tra%20cafe/tr%C3%A0%20ph%C3%BAc%20long%202.jpg',
+        des: 'Trong quá trình tìm kiếm từng loại trà thượng hạng, Phúc Long luôn giữ gìn những hợp chất đặc biệt từ lá trà để làm nên tách trà đậm vị. Theanine (vị ngon) là cảm nhận được trạng thái tỉnh táo, tràn đầy năng lượng khi thưởng thức trà. Carbohydrate (vị ngọt) là đường tích trữ trong lá trà. Polyphenols (vị chát) là thành phần đặc biệt có nhiều trong lá trà non. Caffein (vị đắng) là thành phần bị ảnh hưởng bởi 2 yếu tố: nhiệt độ nước và cách ngâm. Để tiết chế caffein, khi pha nên dùng nước nhiệt độ vừa phải và giảm thời gian ngâm trà. Enzyme (men) là chất xúc tác sinh học thúc đẩy quá trình lên men của lá trà',
+    },
+    {
+        img: "https://phuclong.com.vn/upload/files/2/tra%20cafe/tr%C3%A0-ph%C3%BAc-long-6'.jpg",
+        des: 'Phúc Long thấu hiểu để có được một tách trà ngon thì từ quá trình thu hái lá trà cho đến quá trình sao chế và pha trà cũng cần phải chuẩn xác. Khi sao trà cần phải canh lửa vừa vặn, khi pha trà nhiệt độ nước cũng vừa phải. Để giờ đây, cầm trên tay tách trà ngát hương, nhâm nhi trọn vị trà truyền thống như là một cách thể hiện tâm tình đối với cuộc sống, cảm thụ hương vị tự nhiên toát ra từ lá trà, lòng an nhiên trước bao bộn bề.',
+    },
 ];
 
 export const dataStore = [
@@ -630,5 +723,35 @@ export const district = [
     },
     {
         value: 'Quận Tân Bình'
+    }
+];
+
+export const info = [
+    {
+        label: 'Trụ sở chính:',
+        description: 'Công ty Cổ Phần Phúc Long Heritage - ĐKKD: 0316 871719do sở KHĐT TPHCM cấp lần đầu ngày 21/05/2021'
+    },
+    {
+        label: 'Nhà máy:',
+        description: 'D_8D_CN Đường XE 1, Khu Công Nghiệp Mỹ Phước III, phường Mỹ Phước, thị xã Bến Cát, tỉnh Bình Dương, Việt Nam'
+    },
+    {
+        label: 'Địa chỉ:',
+        description: '42/24 - 42/26 Đường 643 Tạ Quang Bửu, phường 4, quận 8, Hồ Chí Minh'
+    },
+    {
+        label: 'Điện thoại:',
+        description: '028 6263 0377 - 6263 0378'
+    },
+    {
+        label: 'Fax:',
+        description: '(028) 6263 0379'
+    },
+    {
+        label: 'Email:',
+        description: `sales@phuclong.masangroup.com or info2@phuclong.masangroup.com`
+    },
+    {
+        images: "/images/accuracy.png",
     }
 ]

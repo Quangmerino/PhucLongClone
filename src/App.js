@@ -11,6 +11,7 @@ import AboutPage from "./pages/About";
 import CardPage from "./pages/Card";
 import MessageUs from "./components/MessageUs";
 import CallUs from "./components/CallUs";
+import BackToTop from "./components/BackToTop";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
       <Footer />
       <MessageUs/>
       <CallUs/>
+      <BackToTop/>
     </div>
   );
 }

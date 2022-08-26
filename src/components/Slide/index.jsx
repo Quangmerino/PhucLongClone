@@ -1,13 +1,10 @@
-import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper";
-import slide1 from "./images/img1.png";
-import slide2 from "./images/img2.jpeg";
-import slide3 from "./images/img3.png";
-import slide4 from "./images/img4.jpeg";
 import { Link } from "react-router-dom";
+import { dataSlide } from "../../data";
 
 export default function Slide() {
   return (
@@ -26,26 +23,17 @@ export default function Slide() {
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper"
       >
-        <SwiperSlide>
-          <Link to="/">
-            <img src={slide1} alt="" />
-          </Link>
-        </SwiperSlide>
-        <SwiperSlide>
-          <Link to='/'>
-            <img src={slide2} alt="" />
-          </Link>
-        </SwiperSlide>
-        <SwiperSlide>
-          <Link to='/'>
-            <img src={slide3} alt="" />
-          </Link>
-        </SwiperSlide>
-        <SwiperSlide>
-          <Link to='/'>
-            <img src={slide4} alt="" />
-          </Link>
-        </SwiperSlide>
+        {
+          dataSlide.map((item, index) => {
+            return(
+              <SwiperSlide key={index}>
+                <Link to={item.href}>
+                  <img src={item.images} alt="banner" />
+                </Link>
+              </SwiperSlide>
+            )
+          })
+        }
       </Swiper>
     </>
   );

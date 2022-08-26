@@ -1,17 +1,23 @@
 import { PhoneOutlined } from "@ant-design/icons";
-import ButtonComponent from "../ButtonComponent";
+import { Link } from "react-router-dom";
 
-export default function CallUs(){
-    return(
-        <ButtonComponent 
-            className="flex flex-row-reverse font-bold items-center animate-bounce fixed z-50 left-10 bottom-52 bg-black text-white rounded-full gap-2 pr-2"
-            icon={
-                <PhoneOutlined 
-                    className="animate-spin"
-                    style={{fontSize:'20px', color: 'white', padding:'8px', background:'green', borderRadius: '50%'}} 
-                />
-                }
-            name='18006779'
-        />
-    )
+export default function CallUs() {
+  return (
+    <a
+      className="flex font-bold items-center animate-bounce fixed z-50 left-10 bottom-1/4 bg-black text-white rounded-full gap-2 pr-4"
+      href="tel:18006779"
+    >
+      <PhoneOutlined
+        className="animate-spin"
+        style={{
+          fontSize: "20px",
+          color: "white",
+          padding: "10px",
+          background: "green",
+          borderRadius: "50%",
+        }}
+      />
+      <span>18006779</span>
+    </a>
+  );
 }

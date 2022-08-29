@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
-import navigations from "./navigations";
+import {navigations} from "../../data";
 import { Button, Popover } from "antd";
 import { SearchOutlined } from "@ant-design/icons";
+
 // import 'antd/dist/antd.css';
 
 export default function Navigation() {
@@ -24,7 +25,7 @@ export default function Navigation() {
               <Link
                 key={index}
                 to={item.path}
-                className="uppercase py-2 px-8 font-bold hover:text-green-700"
+                className="uppercase py-2 px-8 font-bold text-[16px] hover:text-green-700 focus:text-green-700"
               >
                 {item.name}
               </Link>

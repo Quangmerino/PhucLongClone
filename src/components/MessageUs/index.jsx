@@ -1,30 +1,73 @@
-import { EllipsisOutlined, MessageOutlined, MinusOutlined } from "@ant-design/icons";
-import { Button, Popover } from "antd";
-import ButtonComponent from "../ButtonComponent";
+import {
+  EllipsisOutlined,
+  MessageOutlined,
+  MinusOutlined,
+} from "@ant-design/icons";
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import ButtonCustom from "../ButtonComponent";
 
 export default function MessageUs() {
-  const PopoverMessage = (
-    <div className="flex flex-col gap-3 bg-white w-[350px] rounded-lg py-8 px-4 shadow-2xl">
-      <div className="flex justify-between">
-        <img className="h-[30px]" src="/images/logo2.png" alt="" />
-        <div className="flex gap-3 items-center">
-            <ButtonComponent className="p-1.5 bg-gray-200 rounded-full flex items-center" icon={<EllipsisOutlined/>}/>
-            <ButtonComponent className="p-1.5 bg-gray-200 rounded-full flex items-center" icon={<MinusOutlined/>}/>
-        </div>
-      </div>
-      <div className="flex gap-2">
-        <span className="font-bold text-[20px] bg-white text-ellipsis rounded-full overflow-hidden whitespace-nowrap truncate">Chat with Phuc Long Coffee & Tea</span>
-        <img src="/svg/accuracy.svg" alt=""/>
-      </div>
-      <span>Chào bạn, bạn cần Phúc Long hỗ trợ gì?</span>
-      <ButtonComponent name='Start chat' className='flex justify-center w-full mt-40 bg-green-500 font-bold text-white rounded-lg py-2'/>
-    </div>
-  );
+  const [open, setOpen] = useState(false);
+  const [show, setShow] = useState(false);
   return (
-    <Popover className="fixed z-50 right-10 bottom-1/4" content={PopoverMessage}>
-      <Button className="p-4 bg-green-600 flex items-center rounded-full animate-bounce">
-        <MessageOutlined className="text-white" style={{fontSize: '20px'}}/>
-      </Button>
-    </Popover>
+    <>
+      <ButtonCustom
+        className="p-4 fixed z-50 right-10 bottom-1/4 bg-sky-500 flex items-center rounded-full animate-bounce"
+        icon={
+          <MessageOutlined
+            className="text-white"
+            style={{ fontSize: "20px" }}
+          />
+        }
+        onClick={() => setOpen(!open)}
+      />
+      {open ? (
+        <div className="fixed bottom-1/4 right-28 flex flex-col gap-3 bg-white w-[350px] rounded-2xl py-8 px-4 shadow-2xl z-10">
+          <div className="flex justify-between">
+            <img className="h-[30px]" src="/images/logo2.png" alt="" />
+            <div className="flex gap-3 items-center relative">
+              <ButtonCustom
+                className="p-1.5 bg-gray-200 rounded-full flex items-center"
+                icon={<EllipsisOutlined />}
+                onClick={() => {
+                  setShow(!show);
+                }}
+              />
+              <ButtonCustom
+                className="p-1.5 bg-gray-200 rounded-full flex items-center"
+                icon={<MinusOutlined />}
+                onClick={() => setOpen(false)}
+              />
+            </div>
+            {show ? (
+              <ul className="absolute flex flex-col bg-white shadow-xl top-16 p-1.5 w-[318px] rounded-md border">
+                <Link className="px-2 py-1 hover:bg-gray-300 rounded-md" to="">
+                  Visit Facebook Page
+                </Link>
+                <Link className="px-2 py-1 hover:bg-gray-300 rounded-md" to="">
+                  Add messenger to your website
+                </Link>
+              </ul>
+            ) : null}
+          </div>
+          <div className="flex gap-2">
+            <span className="font-bold text-[20px] bg-white text-ellipsis rounded-full overflow-hidden whitespace-nowrap truncate">
+              Chat with Phuc Long Coffee & Tea
+            </span>
+            <img src="/svg/accuracy.svg" alt="" />
+          </div>
+          <span>Chào bạn, bạn cần Phúc Long hỗ trợ gì?</span>
+          <ButtonCustom
+            name="Start chat"
+            className="flex justify-center w-full mt-40 bg-green-500 font-bold text-white rounded-lg py-2"
+          />
+          <div className="flex items-center justify-center gap-2 py-1 px-8">
+            <img className="w-[20px] h-auto" src="/svg/icon-messenger.svg.png" alt="" />
+            <span className="font-semibold">Powered by Messenger</span>
+          </div>
+        </div>
+      ) : null}
+    </>
   );
 }

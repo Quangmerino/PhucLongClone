@@ -1,10 +1,8 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Autoplay } from "swiper";
-import logo1 from "./images/logo.png";
-import logo2 from "./images/logo1.png";
-import logo3 from "./images/logo2.png";
 import { Link } from "react-router-dom";
+import { dataSlideHeader } from "../../../../data";
 
 export default function SlideHeader() {
   return (
@@ -19,21 +17,17 @@ export default function SlideHeader() {
         modules={[Autoplay]}
         className="mySwiper w-[50px]"
       >
-        <SwiperSlide>
-          <Link to="/">
-            <img className="w-[50px]" src={logo1} alt="" />
-          </Link>
-        </SwiperSlide>
-        <SwiperSlide>
-          <Link to="/">
-            <img className="w-[50px]" src={logo2} alt="" />
-          </Link>
-        </SwiperSlide>
-        <SwiperSlide>
-          <Link to="/">
-            <img className="w-[50px]" src={logo3} alt="" />
-          </Link>
-        </SwiperSlide>
+        {
+          dataSlideHeader.map((item,index)=>{
+            return (
+              <SwiperSlide key={index}>
+                <Link to={item.href}>
+                  <img className="w-[50px]" src={item.images} alt="logo" />
+                </Link>
+              </SwiperSlide>
+            )
+          })
+        }
       </Swiper>
     </>
   );

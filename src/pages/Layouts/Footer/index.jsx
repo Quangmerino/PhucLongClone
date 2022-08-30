@@ -1,10 +1,9 @@
-import { info } from "./data";
 import ButtonCustom from "../../../components/ButtonComponent";
 import { Link } from "react-router-dom";
 import ButtonComponent from "../../../components/ButtonComponent";
-import accuracyImg from "./images/accuracy.png";
 import { FacebookOutlined, InstagramOutlined, TwitterOutlined, YoutubeOutlined } from "@ant-design/icons";
-import BackToTop from "../../../components/BackToTop";
+import { info } from "../../../data";
+
 
 export default function Footer() {
   return (
@@ -52,7 +51,7 @@ export default function Footer() {
               <ButtonComponent className="pl-2" name="EN" />
             </div>
             <Link to='/'>
-                <img className="w-[200px]" src={accuracyImg} alt="" />
+                <img className="w-[200px]" src="" alt="" />
             </Link>
             <div className="flex gap-4">
               <Link to="/phuclongcoffeeendtea">
@@ -70,7 +69,6 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <BackToTop/>
       </div>
       <div className="bg-black flex justify-center py-1">
         <span className="text-gray-400">

@@ -15,7 +15,7 @@ export default function SlideHeader() {
           disableOnInteraction: false,
         }}
         modules={[Autoplay]}
-        className="mySwiper w-[50px]"
+        className="mySwiper hidden sm:flex w-[50px]"
       >
         {
           dataSlideHeader.map((item,index)=>{

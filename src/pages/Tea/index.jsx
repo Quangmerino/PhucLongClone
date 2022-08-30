@@ -13,7 +13,7 @@ export default function TeaPage() {
             {
                 dataTeaTab1.map((item, index)=>{
                     return(
-                        <CardComponent key={index} img={item.img} des={item.des}/>
+                        <CardComponent key={index} img={item.img} des={item.des} styleProduct="even:flex-row-reverse"/>
                     )
                 })
             }

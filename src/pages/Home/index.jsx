@@ -21,6 +21,7 @@ export default function HomePage() {
             title={item.title}
             name={item.name}
             des={item.des}
+            styleProduct="odd:flex-row-reverse"
           />
         );
       })}

@@ -13,7 +13,7 @@ export default function CoffeePage() {
             {
                 dataCoffee.map((item, index)=>{
                     return(
-                        <CardComponent key={index} img={item.img} des={item.des}/>
+                        <CardComponent key={index} img={item.img} des={item.des} styleProduct="even:flex-row-reverse"/>
                     )
                 })
             }

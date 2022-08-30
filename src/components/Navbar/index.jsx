@@ -4,39 +4,59 @@ import { SearchOutlined } from "@ant-design/icons";
 import ButtonCustom from "../ButtonComponent";
 
 // import 'antd/dist/antd.css';
-
-export default function Navigation() {
+function Navigation() {
   return (
-    <div className="flex items-center gap-8 justify-center border-y-2 border-gray-200">
+    <div 
+      className="hidden items-center justify-center border-y-2 border-gray-200 md:flex xl:gap-8"
+    >
       <ul className="flex py-2 justify-center">
-        <li>
-          {navigations.map((item, index) => {
-            return (
+        {navigations.map((item, index) => {
+          return (
+            <li key={index}>
               <Link
-                key={index}
                 to={item.path}
-                className="uppercase py-2 px-8 font-bold text-[16px] hover:text-green-700 focus:text-green-700"
+                className="uppercase py-2 font-bold text-[16px] hover:text-green-700 focus:text-green-700 lg:px-8"
               >
                 {item.name}
               </Link>
-            );
-          })}
-        </li>
+            </li>
+          );
+        })}
       </ul>
       <div>
         <ButtonCustom
           className="flex items-center"
           icon={<SearchOutlined style={{ fontSize: "20px" }} />}
         />
-        {/* <ul className="z-10 flex flex-col gap-4 p-4 bg-white rounded-sm shadow-2xl w-[200px]">
-          <li>
-            <Link to="/">Sản phẩm trà</Link>
-          </li>
-          <li>
-            <Link to="/">Sản phẩm cà phê</Link>
-          </li>
-        </ul> */}
       </div>
     </div>
   );
 }
+
+function NavigationMobile() {
+  return (
+    <ul className="flex flex-col md:hidden gap-3 py-6 px-8">
+      {navigations.map((item, index) => {
+        return (
+          <li key={index}>
+            <Link
+              to={item.path}
+              className="uppercase py-2 px-8 font-bold text-[16px] hover:text-green-700 focus:text-green-700"
+            >
+              {item.name}
+            </Link>
+          </li>
+        );
+      })}
+      <div className="flex items-center ml-8">
+        <ButtonCustom
+          className="border-r-2 border-green-700 pr-2 text-green-700"
+          name="VN"
+        />
+        <ButtonCustom className="pl-2" name="EN" />
+      </div>
+    </ul>
+  );
+}
+
+export { Navigation, NavigationMobile };

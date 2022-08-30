@@ -28,7 +28,7 @@ export default function Slide() {
             return(
               <SwiperSlide key={index}>
                 <Link to={item.href}>
-                  <img src={item.images} alt="banner" />
+                  <img className="w-full" src={item.images} alt="banner" />
                 </Link>
               </SwiperSlide>
             )

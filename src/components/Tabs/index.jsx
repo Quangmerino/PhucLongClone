@@ -1,21 +1,22 @@
-// import { useState } from "react";
+import { useState } from "react";
 
-// export default function TabsCustom({tabNumber, children}) {
-//   const renderTab = (tabNumber) {
-//     for(i>0 ; i<=tabNumber; i++){
-//       return [i];
-//     }
-//   }
-//   const [tab, setTab] = useState(0);
-//   const [item, setItem] = useState();
-//     return (
-//         <div>
-//           {
-            
-//           }
-//           <div>
-//             {children}
-//           </div>
-//         </div>
-//       )
-// }
+export default function TabsCustom({tabs, children}) {
+  const [tabName, setTabName] = useState(0);
+  const [type, setType] = useState() ;
+    return (
+        <div>
+            {
+                tabs.map((tab, index)=>{
+                    return(
+                        <button 
+                            key={index}
+                            onClick={()=> setType(tab)}
+                        >
+                            {tab}
+                        </button>
+                    )
+                })
+            }
+        </div>
+      )
+}

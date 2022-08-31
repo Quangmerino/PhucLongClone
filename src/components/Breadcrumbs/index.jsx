@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function Breadcrumbs(props) {
   const {breadcrumbs} = props;
   return (
-      <ul class="flex justify-center items-center my-4 text-[18px] w-[800px] gap-2">
+      <ul class="flex justify-center items-center my-4 text-[18px] gap-2">
         <li className="text-gray-400 hover:text-red-500">
           <Link to='/'>Home</Link>
         </li>

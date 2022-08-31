@@ -10,26 +10,28 @@ import { CardComponent } from "../../components/Card";
 export default function HomePage() {
   useTitle("Phúc Long Coffee & Tea");
   return (
-    <div className="">
+    <div className="w-full">
       <Slide />
-      {dataHome.map((item, index) => {
-        return (
-          <CardComponent
-            key={index}
-            className="text-green-700 rounded-md py-1 px-4 border border-green-700 hover:bg-green-700 hover:text-white"
-            img={item.img}
-            title={item.title}
-            name={item.name}
-            des={item.des}
-            styleProduct="odd:flex-row-reverse"
-          />
-        );
-      })}
-      <div className="flex bg-green-700 px-24 pt-20 pb-6">
-        <div className="flex flex-col basis-1/2">
-          <div className="flex flex-col gap-8">
+      <div className="px-3">
+        {dataHome.map((item, index) => {
+          return (
+            <CardComponent
+              key={index}
+              className="text-green-700 rounded-md py-1 px-4 border border-green-700 m-auto md:m-0 hover:bg-green-700 hover:text-white"
+              img={item.img}
+              title={item.title}
+              name={item.name}
+              des={item.des}
+              styleProduct="md:odd:flex-row-reverse"
+            />
+          );
+        })}
+      </div>
+      <div className="flex px-4 pt-10 pb-6 bg-green-700 md:pt-20 md:px-6 xl:px-24">
+        <div className="flex flex-col basis-full lg:basis-1/2">
+          <div className="flex flex-col items-center gap-4 lg:items-start lg:gap-8">
             <Title title="HỆ THỐNG CỬA HÀNG" className="text-white text-28px" />
-            <div className="flex gap-2">
+            <div className="flex gap-2 flex-row">
               <select class="w-full max-w-xs outline-none border-2 border-white bg-green-700 text-white rounded-md py-1 px-3">
                 {cities.map((item, index) => {
                   return (
@@ -54,16 +56,16 @@ export default function HomePage() {
               className="text-white text-[18px] normal-case"
             />
           </div>
-          <div className="flex flex-col gap-4 mt-10 overflow-auto h-[300px]">
+          <div className="flex flex-col gap-4 mt-10 w-full overflow-auto h-[300px]">
             {dataStore.map((item, index) => {
               return (
-                <div className="flex items-center gap-8">
-                  <div className="basis-1/5">
+                <div key={index} className="flex flex-col gap-4 sm:px-10 lg:px-0 lg:flex-row lg:items-center lg:gap-8">
+                  <div className="basis-full lg:basis-1/2">
                     <Link className="text-white flex gap-2" to="/">
-                      <HomeOutlined className="text-white mt-1" />
-                      <div>
-                        <span>{item.address}</span>
-                        <span className="block w-[400px]">{item.phone}</span>
+                      <HomeOutlined className="hidden text-white mt-1 lg:flex" />
+                      <div className="flex flex-col">
+                        <span className="text-justify">{item.address}</span>
+                        <span className="block">{item.phone}</span>
                       </div>
                     </Link>
                   </div>
@@ -76,7 +78,7 @@ export default function HomePage() {
             })}
           </div>
         </div>
-        <div className="basis-1/2"></div>
+        <div className="lg:basis-1/2"></div>
       </div>
     </div>
   );

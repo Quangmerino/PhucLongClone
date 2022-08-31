@@ -19,7 +19,7 @@ export default function Slide() {
         pagination={{
           clickable: true,
         }}
-        navigation={true}
+        navigation={false}
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper"
       >
@@ -28,7 +28,7 @@ export default function Slide() {
             return(
               <SwiperSlide key={index}>
                 <Link to={item.href}>
-                  <img className="w-full" src={item.images} alt="banner" />
+                  <img className="object-contain" src={item.images} alt="banner" />
                 </Link>
               </SwiperSlide>
             )

@@ -17,7 +17,7 @@ function App() {
   return (
     <div className="">
       <Header />
-      <main className="mt-[125px]">
+      <main className="mt-[80px] md:mt-[125px]">
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/coffee" element={<CoffeePage />} />

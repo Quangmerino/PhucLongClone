@@ -7,7 +7,7 @@ import ButtonCustom from "../ButtonComponent";
 function Navigation() {
   return (
     <div 
-      className="hidden items-center justify-center border-y-2 border-gray-200 md:flex xl:gap-8"
+      className="hidden items-center justify-center border-y-2 border-gray-200 md:flex"
     >
       <ul className="flex py-2 justify-center">
         {navigations.map((item, index) => {
@@ -15,7 +15,7 @@ function Navigation() {
             <li key={index}>
               <Link
                 to={item.path}
-                className="uppercase py-2 font-bold text-[16px] hover:text-green-700 focus:text-green-700 lg:px-8"
+                className="uppercase py-2 px-2 font-bold md:text-[15px] hover:text-green-700 focus:text-green-700 lg:px-4 xl:px-8"
               >
                 {item.name}
               </Link>
@@ -25,8 +25,8 @@ function Navigation() {
       </ul>
       <div>
         <ButtonCustom
-          className="flex items-center"
-          icon={<SearchOutlined style={{ fontSize: "20px" }} />}
+          className="flex items-center p-1"
+          icon={<SearchOutlined style={{ fontSize: "18px" }} />}
         />
       </div>
     </div>
@@ -35,25 +35,25 @@ function Navigation() {
 
 function NavigationMobile() {
   return (
-    <ul className="flex flex-col md:hidden gap-3 py-6 px-8">
+    <ul className="flex flex-col md:hidden gap-3 py-6 pl-3">
       {navigations.map((item, index) => {
         return (
           <li key={index}>
             <Link
               to={item.path}
-              className="uppercase py-2 px-8 font-bold text-[16px] hover:text-green-700 focus:text-green-700"
+              className="uppercase py-2 font-bold text-[16px] hover:text-green-700 focus:text-green-700"
             >
               {item.name}
             </Link>
           </li>
         );
       })}
-      <div className="flex items-center ml-8">
+      <div className="flex flex-col items-start gap-4">
         <ButtonCustom
-          className="border-r-2 border-green-700 pr-2 text-green-700"
+          className="border-green-700 text-green-700 border rounded-md px-2"
           name="VN"
         />
-        <ButtonCustom className="pl-2" name="EN" />
+        <ButtonCustom className="border-gray-400 border rounded-md px-2" name="EN" />
       </div>
     </ul>
   );

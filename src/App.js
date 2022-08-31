@@ -15,9 +15,9 @@ import BackToTop from "./components/BackToTop";
 
 function App() {
   return (
-    <div className="">
+    <div className="overflow-hidden">
       <Header />
-      <main className="mt-[80px] md:mt-[125px]">
+      <main className="mt-[60px] md:mt-[125px]">
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/coffee" element={<CoffeePage />} />

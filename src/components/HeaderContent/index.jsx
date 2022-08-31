@@ -3,7 +3,6 @@ import TitlePage from "../Title";
 
 export default function HeaderContent(props){
     const {breadcrumbs, title, bannerImg} = props;
-    console.log({bannerImg});
     return(
         <div className="flex flex-col items-center">
             {

@@ -2,12 +2,13 @@
 import ButtonCustom from "../../components/ButtonComponent";
 import { CardProduct } from "../../components/Card";
 import HeaderContent from "../../components/HeaderContent";
+// import PaginatedItems from "../../components/Panigation";
 import { dataDrinks } from "../../data";
 import { useTitle } from "../../hooks/useTitle";
 
 export default function DrinkPage() {
   useTitle("Thức uống - Phúc Long Coffee & Tea");
-  console.log(dataDrinks);
+
   return (
     <div className="">
       <HeaderContent

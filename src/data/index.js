@@ -1171,22 +1171,22 @@ export const dataAbout = [
         ],
         animation: [
             {
-                image: "/svg/animation1.svg",
+                image: "./svg/animation1.svg",
             },
             {
-                image: "/svg/animation2.svg",
+                image: "./svg/animation2.svg",
             },
             {
-                image: "/svg/animation3.svg",
+                image: "./svg/animation3.svg",
             },
             {
-                image: "/svg/animation4.svg",
+                image: "./svg/animation4.svg",
             },
             {
-                image: "/svg/animation5.svg",
+                image: "./svg/animation5.svg",
             },
             {
-                image: "/svg/animation6.svg",
+                image: "./svg/animation6.svg",
             },
         ],
     },

@@ -1,34 +1,34 @@
 
 export const dataSlideHeader = [
     {
-        images: '/images/logo.png',
+        images: './images/logo.png',
         href: '/',
     },
     {
-        images: '/images/logo1.png',
+        images: './images/logo1.png',
         href: '/',
     },
     {
-        images: '/images/logo2.png',
+        images: './images/logo2.png',
         href: '/',
     },
 ];
 
 export const dataSlide = [
     {
-        images: '/images/banner1.png',
+        images: './images/banner1.png',
         href: '',
     },
     {
-        images: '/images/banner2.jpeg',
+        images: './images/banner2.jpeg',
         href: '',
     },
     {
-        images: '/images/banner3.png',
+        images: './images/banner3.png',
         href: '',
     },
     {
-        images: '/images/banner4.jpeg',
+        images: './images/banner4.jpeg',
         href: '',
     },
 ];

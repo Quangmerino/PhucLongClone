@@ -35,36 +35,95 @@ export const dataSlide = [
 
 export const navigations = [
     {
+        id: "1",
         path:'/',
-        name:'Trang chủ'
+        name:'Trang chủ',
+        sub_menu: []
     },
     {
+        id: "2",
         path:'/coffee',
-        name:'Cà phê'
+        name:'Cà phê',
+        sub_menu: [
+            {
+                name: "Hành trình tách cà phê đậm vị",
+                path: "",
+            },
+            {
+                name: "Hạt cà phê Phúc Long",
+                path: "",
+            },
+            {
+                name: "Nghệ thuật pha chế",
+                path: "",
+            },
+        ]
     },
     {
+        id: "3",
         path:'/tea',
-        name:'Trà'
+        name:'Trà',
+        sub_menu: [
+            {
+                name: "Hành trình tách trà đậm vị",
+                path: "",
+            },
+            {
+                name: "Lá trà Phúc Long",
+                path: "",
+            },
+            {
+                name: "Cold Brew Tea - Trà Ủ Lạnh - Phong Cách Trà Mới",
+                path: "",
+            },
+            {
+                name: "Nghệ thuật pha chế",
+                path: "",
+            },
+        ]
     },
     {
+        id: "4",
         path:'/drinks',
-        name:'Thức uống'
+        name:'Thức uống',
+        sub_menu: [
+            {
+                name: "Thức uống",
+                path: "",
+            },
+            {
+                name: "Bánh tráng miệng",
+                path: "",
+            },
+            {
+                name: "Đồ ăn mặn",
+                path: "",
+            },
+        ]
     },
     {
+        id: "5",
         path:'/products',
-        name:'Sản phẩm'
+        name:'Sản phẩm',
+        sub_menu: []
     },
     {
+        id: "6",
         path:'/sales',
-        name:'Khuyến mãi'
+        name:'Khuyến mãi',
+        sub_menu: []
     },
     {
+        id: "7",
         path:'/about',
-        name:'Về chúng tôi'
+        name:'Về chúng tôi',
+        sub_menu: []
     },
     {
+        id: "8",
         path:'/card',
-        name:'Thẻ'
+        name:'Thẻ',
+        sub_menu: []
     },
 ];
 

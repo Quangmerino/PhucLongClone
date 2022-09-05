@@ -12,7 +12,7 @@ import { info } from "../../../data";
 export default function Footer() {
   return (
     <>
-      <div className="grid grid-cols-1 gap-10 py-8 px-3 md:px-10 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-10 py-8 px-3 md:px-10 lg:grid-cols-3 xl:px-20">
         <div>
           {info.map((item, index) => {
             return (

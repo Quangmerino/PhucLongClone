@@ -14,7 +14,7 @@ export default function TeaPage() {
         title="LÁ TRÀ PHÚC LONG"
       />
       {/* <Tabs/> */}
-      <div className="px-3">
+      <div className="row">
         {dataTeaTab1.map((item, index) => {
           return (
             <CardComponent

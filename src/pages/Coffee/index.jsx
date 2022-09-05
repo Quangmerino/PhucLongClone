@@ -14,7 +14,7 @@ export default function CoffeePage() {
         title="HẠT CÀ PHÊ PHÚC LONG"
       />
       {/* <Tabs/> */}
-      <div className="px-3">
+      <div className="row">
         {dataCoffee.map((item, index) => {
           return (
             <CardComponent

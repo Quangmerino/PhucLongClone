@@ -1,0 +1,56 @@
+.nav {
+    @apply hidden items-center justify-center border-y-2 border-gray-200 md:flex relative;
+    &__item {
+        @apply uppercase py-2 px-2 font-bold md:text-[15px] hover:text-green-700 focus:text-green-700 lg:px-4 xl:px-8;
+        &:hover {
+            @apply duration-300;
+            .sub-menu{
+                @apply flex flex-col;
+            }
+        }
+    }
+    &__search {
+        @apply relative;
+        &--button {
+            @apply flex items-center p-1;
+        }
+        &--list {
+            @apply border rounded-md bg-white absolute top-10 p-0.5 right-0;
+        }
+        &--item {
+            @apply block px-2 min-w-[150px];
+            &:hover {
+                @apply bg-green-700 text-white rounded-md;
+            }
+        }
+    }
+    &__mobile {
+        @apply flex flex-col md:hidden gap-3 py-6 pl-3;
+        &--item {
+            @apply uppercase py-2 font-bold text-[16px] hover:text-green-700 focus:text-green-700;
+            &:hover {
+                @apply duration-300;
+                .sub-menu{
+                    @apply flex flex-col;
+                }
+            }
+        }
+        &--button {
+            @apply border-green-700 text-green-700 border rounded-md px-2
+        }
+    }
+}
+
+.sub-menu {
+    @apply hidden bg-white shadow-xl z-50;
+    position: absolute;
+    top: 18px;
+    margin-top: 20px;
+    padding-top: 18px;
+    &__item {
+        @apply px-2 py-1;
+        &:hover {
+            @apply duration-300 bg-green-700 text-white
+        }
+    }
+}

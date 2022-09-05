@@ -16,8 +16,8 @@ export default function DrinkPage() {
         breadcrumbs="Thức uống"
         title="Thức uống"
       />
-      <div className="">
-        <div className="grid grid-cols-1 p-6 gap-y-8 md:grid-cols-2 md:gap-10 md:p-10 lg:grid-cols-3 lg:p-20 lg:px-10 xl:grid-cols-4">
+      <div className="row">
+        <div className="grid grid-cols-1 gap-y-8 py-16 md:grid-cols-2 md:gap-10 lg:grid-cols-3 xl:grid-cols-4">
           {dataDrinks.map((item, index) => {
             return (
               <CardProduct

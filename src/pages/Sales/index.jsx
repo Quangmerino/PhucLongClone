@@ -10,14 +10,15 @@ export default function SalePage() {
   return (
     <>
       <Slide />
-      <div className="flex flex-col items-center">
+      <div className="">
         <Breadcrumbs breadcrumbs="Khuyến mãi" />
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 p-20">
+        <div className="row">
+        <div className="grid grid-cols-1 gap-y-8 py-16 md:grid-cols-2 md:gap-10 md:px-10 lg:grid-cols-3 xl:grid-cols-4">
           {dataSale.map((item, index) => {
             return (
               <CardProduct
                 key={index}
-                className="flex flex-col items-center gap-1.5 bg-white hover:shadow-lg hover:border overflow-hidden rounded-md pb-4"
+                className="flex flex-col items-center border gap-1.5 shadow-lg bg-white overflow-hidden rounded-md pb-4 md:shadow-none md:hover:shadow-lg md:hover:border lg:border-0"
                 classNameChild="flex flex-col w-full last:hover:text-green-700"
                 image={item.img}
               >
@@ -34,6 +35,7 @@ export default function SalePage() {
               </CardProduct>
             );
           })}
+        </div>
         </div>
       </div>
     </>

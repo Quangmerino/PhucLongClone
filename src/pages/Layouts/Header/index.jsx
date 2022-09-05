@@ -12,7 +12,7 @@ export default function Header() {
     <div className="fixed top-0 right-0 left-0 z-10 bg-white shadow-2xl">
       <div className="flex justify-between items-center py-4 h-[60px] md:h-[80px] px-3 sm:px-10 md:px-24 lg:px-28 xl:px-32 2xl:px-40">
         <ButtonCustom 
-          className="flex sm:hidden"
+          className="flex md:hidden"
           onClick={()=> setOpen(!open)}
           icon={<MenuOutlined style={{fontSize: '24px'}}/>}
         />

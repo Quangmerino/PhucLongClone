@@ -12,12 +12,12 @@ export default function HomePage() {
   return (
     <div className="w-full">
       <Slide />
-      <div className="px-3">
+      <div className="row">
         {dataHome.map((item, index) => {
           return (
             <CardComponent
               key={index}
-              className="text-green-700 rounded-md py-1 px-4 border border-green-700 m-auto md:m-0 hover:bg-green-700 hover:text-white"
+              className="text-green-700 rounded-md py-1 px-4 border border-green-700 m-auto hover:bg-green-700 hover:text-white md:m-0"
               img={item.img}
               title={item.title}
               name={item.name}

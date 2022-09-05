@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/PhucLongClone/static/css/main.60b3a6ed.css",
+    "main.js": "/PhucLongClone/static/js/main.6700f9dd.js",
+    "static/js/787.3fd3ec21.chunk.js": "/PhucLongClone/static/js/787.3fd3ec21.chunk.js",
+    "index.html": "/PhucLongClone/index.html",
+    "main.60b3a6ed.css.map": "/PhucLongClone/static/css/main.60b3a6ed.css.map",
+    "main.6700f9dd.js.map": "/PhucLongClone/static/js/main.6700f9dd.js.map",
+    "787.3fd3ec21.chunk.js.map": "/PhucLongClone/static/js/787.3fd3ec21.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.60b3a6ed.css",
+    "static/js/main.6700f9dd.js"
+  ]
+}

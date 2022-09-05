@@ -13,7 +13,7 @@ export default function AboutPage() {
         title="Về chúng tôi"
       />
       <img className="mt-20 w-[80px] sm:w-[120px]" src="./images/logo.png" alt="" />
-      <div className="flex flex-col gap-6 px-3 py-16 md:px-10 2xl:px-56">
+      <div className="flex flex-col gap-6 px-3 py-16 md:px-10 xl:px-20 2xl:px-56">
         {dataAbout.map((item, index) => {
           return (
             <div key={index}>

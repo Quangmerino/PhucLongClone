@@ -8,11 +8,11 @@ export default function ProductPage() {
   return (
     <>
       <HeaderContent
-        bannerImg="/images/banner4.jpeg"
+        bannerImg="./images/banner4.jpeg"
         breadcrumbs="Sản phẩm"
         title="SẢN PHẨM"
       />
-      <div className="row">
+      <div className="py-14">
         {dataProduct.map((item, index) => {
           return (
             <CardComponent
@@ -23,8 +23,8 @@ export default function ProductPage() {
               des={item.des}
               name={item.name}
               className="text-green-700 rounded-md py-1 px-4 border border-green-700 hover:bg-green-700 hover:text-white"
-              styleProduct="md:even:flex-row-reverse even:bg-gray-50"
-              styleBackground="border rounded-full w-[280px] h-[280px] shadow-lg bg-white"
+              styleProduct=" even:bg-gray-50 md:even:flex-row-reverse md:px-10 lg:h-[500px]"
+              styleBackground="border rounded-full md:w-[200px] md:h-[200px] lg:w-[280px] lg:h-[280px] shadow-lg bg-white"
             />
           );
         })}

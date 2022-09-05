@@ -12,7 +12,7 @@ export default function HomePage() {
   return (
     <div className="w-full">
       <Slide />
-      <div className="row">
+      <div className="row flex flex-col gap-16">
         {dataHome.map((item, index) => {
           return (
             <CardComponent

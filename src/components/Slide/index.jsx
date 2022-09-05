@@ -5,8 +5,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper";
 import { Link } from "react-router-dom";
 import { dataSlide } from "../../data";
+import { memo } from "react";
 
-export default function Slide() {
+function Slide() {
   return (
     <>
       <Swiper
@@ -38,3 +39,6 @@ export default function Slide() {
     </>
   );
 }
+
+
+export default memo(Slide);

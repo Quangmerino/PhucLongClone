@@ -2,7 +2,7 @@
   "name": "phuclongtea",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://quangmerino.github.io/PhucLongClone/",
+  "homepage": "./",
   "dependencies": {
     "@ant-design/icons": "^4.7.0",
     "@testing-library/jest-dom": "^5.16.5",

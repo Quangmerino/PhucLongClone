@@ -19,7 +19,7 @@ export default function Header() {
         <Link className="hidden md:flex" to="/">
           <img
             className="hover:motion-safe:animate-bounce"
-            src="/images/delivery.png"
+            src="./images/delivery.png"
             alt="delivery"
           />
         </Link>

@@ -9,7 +9,7 @@ export default function CoffeePage() {
   return (
     <div className="flex flex-col items-center">
       <HeaderContent
-        bannerImg="/images/banner-coffee.png"
+        bannerImg="./images/banner-coffee.png"
         breadcrumbs="Hạt cà phê Phúc Long"
         title="HẠT CÀ PHÊ PHÚC LONG"
       />

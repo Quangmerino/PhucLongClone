@@ -12,7 +12,7 @@ export default function DrinkPage() {
   return (
     <div className="">
       <HeaderContent
-        bannerImg="/images/banner3.png"
+        bannerImg="./images/banner3.png"
         breadcrumbs="Thức uống"
         title="Thức uống"
       />

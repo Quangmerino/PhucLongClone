@@ -10,7 +10,7 @@ export default function HeaderContent(props){
             }
             <Breadcrumbs breadcrumbs={breadcrumbs}/>
             <TitlePage className="text-green-700 lg:text-[36px]" title={title}/>
-            <img className="w-[200px] md:w-[300px]" src="/images/icon_tealeaves.png" alt=""/>
+            <img className="w-[200px] md:w-[300px]" src="./images/icon_tealeaves.png" alt=""/>
         </div>
     )
 }

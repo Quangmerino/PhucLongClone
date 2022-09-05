@@ -16,7 +16,7 @@ export default function ProductPage() {
         {dataProduct.map((item, index) => {
           return (
             <CardComponent
-              backgroundImage="url('/images/bg_category_tea.png')"
+              backgroundImage="url('./images/bg_category_tea.png')"
               key={index}
               img={item.img}
               title={item.title}

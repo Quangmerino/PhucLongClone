@@ -9,7 +9,7 @@ export default function TeaPage() {
   return (
     <div className="flex flex-col items-center">
       <HeaderContent
-        bannerImg="/images/banner-tea.jpeg"
+        bannerImg="./images/banner-tea.jpeg"
         breadcrumbs="Lá trà Phúc Long"
         title="LÁ TRÀ PHÚC LONG"
       />

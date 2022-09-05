@@ -25,7 +25,7 @@ export default function MessageUs() {
       {open ? (
         <div className="fixed bottom-1/4 right-28 flex flex-col gap-3 bg-white w-[350px] rounded-2xl py-8 px-4 shadow-2xl z-10">
           <div className="flex justify-between">
-            <img className="h-[30px]" src="/images/logo2.png" alt="" />
+            <img className="h-[30px]" src="./images/logo2.png" alt="" />
             <div className="flex gap-3 items-center relative">
               <ButtonCustom
                 className="p-1.5 bg-gray-200 rounded-full flex items-center"

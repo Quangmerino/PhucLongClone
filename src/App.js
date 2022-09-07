@@ -12,6 +12,7 @@ import CardPage from "./pages/Card";
 import MessageUs from "./components/MessageUs";
 import CallUs from "./components/CallUs";
 import BackToTop from "./components/BackToTop";
+import RecruitPage from "./pages/Recruit";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path="/sales" element={<SalePage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/card" element={<CardPage />} />
+          <Route path="/recruit" element={<RecruitPage />} />
         </Routes>
       </main>
       <Footer />

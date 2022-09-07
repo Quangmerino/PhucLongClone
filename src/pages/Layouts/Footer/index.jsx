@@ -56,30 +56,30 @@ export default function Footer() {
             <ButtonComponent className="pl-2" name="EN" />
           </div>
           <div className="flex gap-4">
-            <Link to="/phuclongcoffeeendtea">
+            <a href="https://www.facebook.com/Ph%C3%BAc-Long-Coffee-Tea-101556229353982/?ref=pages_you_manage">
               <FacebookOutlined
                 className="hover:opacity-60"
                 style={{ fontSize: "20px" }}
               />
-            </Link>
-            <Link to="/phuclongcoffeeendtea">
+            </a>
+            <a href="/">
               <TwitterOutlined
                 className="hover:opacity-60"
                 style={{ fontSize: "20px" }}
               />
-            </Link>
-            <Link to="/phuclongcoffeeendtea">
+            </a>
+            <a href="https://www.instagram.com/phuclongcoffeeandtea/">
               <InstagramOutlined
                 className="hover:opacity-60"
                 style={{ fontSize: "20px" }}
               />
-            </Link>
-            <Link to="/phuclongcoffeeendtea">
+            </a>
+            <a href="https://www.youtube.com/channel/UCq6WR0wWNUuz53c4zeWSa8g">
               <YoutubeOutlined
                 className="hover:opacity-60"
                 style={{ fontSize: "20px" }}
               />
-            </Link>
+            </a>
           </div>
         </div>
       </div>

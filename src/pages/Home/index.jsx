@@ -2,10 +2,9 @@ import { useTitle } from "../../hooks/useTitle";
 import Slide from "../../components/Slide";
 import Title from "../../components/Title";
 import { dataHome, cities, dataStore, district } from "../../data";
-import ButtonCustom from "../../components/ButtonComponent";
-import { Link } from "react-router-dom";
 import { HomeOutlined } from "@ant-design/icons";
 import { CardComponent } from "../../components/Card";
+import { Link } from "react-router-dom";
 
 export default function HomePage() {
   useTitle("Phúc Long Coffee & Tea");
@@ -17,13 +16,17 @@ export default function HomePage() {
           return (
             <CardComponent
               key={index}
-              className="text-green-700 rounded-md py-1 px-4 border border-green-700 m-auto hover:bg-green-700 hover:text-white md:m-0"
               img={item.img}
               title={item.title}
-              name={item.name}
               des={item.des}
               styleProduct="md:odd:flex-row-reverse"
-            />
+            >
+            <Link 
+              className="text-green-700 rounded-md py-1 px-4 border border-green-700 m-auto hover:bg-green-700 hover:text-white md:m-0" 
+              to={item.link}>
+                {item.name}
+              </Link>
+            </CardComponent>
           );
         })}
       </div>
@@ -59,20 +62,25 @@ export default function HomePage() {
           <div className="flex flex-col gap-4 mt-10 w-full overflow-auto h-[300px]">
             {dataStore.map((item, index) => {
               return (
-                <div key={index} className="flex flex-col gap-4 sm:px-10 lg:px-0 lg:flex-row lg:items-center lg:gap-8">
+                <div
+                  key={index}
+                  className="flex flex-col gap-4 sm:px-10 lg:px-0 lg:flex-row lg:items-center lg:gap-8"
+                >
                   <div className="basis-full lg:basis-1/2">
-                    <Link className="text-white flex gap-2" to="/">
+                    <a href={item.googlemap} className="text-white flex gap-2">
                       <HomeOutlined className="hidden text-white mt-1 lg:flex" />
-                      <div className="flex flex-col">
-                        <span className="text-justify">{item.address}</span>
-                        <span className="block">{item.phone}</span>
-                      </div>
-                    </Link>
+                      <span className="text-justify">{item.address}</span>
+                    </a>
+                    <a href={`tel:${item.phone}`} className="block text-white">
+                      Điện thoại: {item.phone}
+                    </a>
                   </div>
-                  <ButtonCustom
-                    name="Chỉ đường"
-                    className="border border-white hover:border-red-500 py-1.5 px-4 rounded-md text-white"
-                  />
+                  <a 
+                  href={item.googlemap} 
+                  className="border border-white hover:border-red-500 py-1.5 px-4 rounded-md text-white text-center"
+                  >
+                    Chỉ đường
+                  </a>
                 </div>
               );
             })}

@@ -20,8 +20,8 @@ export default function AboutPage() {
               <TitlePage className="text-green-700 font-bold mb-3" title={item.title} />
               {item.content.map((item, index) => {
                 return (
-                  <p key={index}>
-                    <span className="font-bold">{item.label} </span>
+                  <p key={index} className="text-justify md:text-start">
+                    <span className="font-bold">{item.label}</span>
                     {item.description}
                   </p>
                 );

@@ -1,4 +1,4 @@
-export default function ButtonCustom(props) {
+function ButtonCustom(props) {
   const { onClick, name, className, icon, styleName } = props;
   let classDefault = "";
   if (className !== "") classDefault += " " + className;
@@ -9,3 +9,5 @@ export default function ButtonCustom(props) {
     </button>
   );
 }
+
+export default ButtonCustom;

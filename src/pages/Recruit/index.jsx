@@ -16,7 +16,7 @@ function RecruitPage() {
             return (
               <CardProduct
                 key={index}
-                className="flex flex-col items-center border gap-1.5 shadow-lg bg-white overflow-hidden rounded-md pb-4 md:shadow-none md:hover:shadow-lg md:hover:border lg:border-0"
+                className="flex flex-col items-center border gap-1.5 shadow-lg bg-white overflow-hidden rounded-md pb-4 duration-300 md:shadow-none md:hover:shadow-lg md:hover:border lg:border-0"
                 classNameChild="flex flex-col w-full last:hover:text-green-700"
                 image={item.img}
               >

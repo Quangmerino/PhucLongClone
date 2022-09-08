@@ -1,5 +1,5 @@
-import ButtonCustom from "../../../components/ButtonComponent";
 import { Link } from "react-router-dom";
+import ButtonCustom from "../../../components/ButtonComponent";
 import ButtonComponent from "../../../components/ButtonComponent";
 import {
   FacebookOutlined,
@@ -8,11 +8,12 @@ import {
   YoutubeOutlined,
 } from "@ant-design/icons";
 import { info } from "../../../data";
+import BackToTop from "../../../components/BackToTop";
 
 export default function Footer() {
   return (
     <>
-      <div className="grid grid-cols-1 gap-10 py-8 px-3 md:px-10 lg:grid-cols-3 xl:px-20">
+      <div className="relative grid grid-cols-1 gap-10 py-8 px-3 md:px-10 lg:grid-cols-3 xl:px-20">
         <div>
           {info.map((item, index) => {
             return (
@@ -82,6 +83,7 @@ export default function Footer() {
             </a>
           </div>
         </div>
+        <BackToTop/>
       </div>
       <div className="bg-black flex justify-center py-1">
         <span className="text-gray-400">

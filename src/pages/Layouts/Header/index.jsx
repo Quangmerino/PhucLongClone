@@ -42,7 +42,9 @@ export default function Header() {
           </div>
         </div>
       </div>
-      {open ? <NavigationMobile /> : null}
+      {open ? <NavigationMobile 
+                // onClick={setOpen(!open)}
+              /> : null}
       <Navigation />
     </div>
   );

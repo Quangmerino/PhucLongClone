@@ -24,7 +24,7 @@ export default function ProductPage() {
               name={item.name}
               className="text-green-700 rounded-md py-1 px-4 border border-green-700 hover:bg-green-700 hover:text-white"
               styleProduct=" even:bg-gray-50 md:even:flex-row-reverse md:px-10 lg:h-[500px] lg:px-20"
-              styleBackground="border rounded-full md:w-[200px] md:h-[200px] lg:w-[280px] lg:h-[280px] shadow-lg bg-white"
+              styleBackground="border rounded-full w-[200px] md:h-[200px] lg:w-[280px] lg:h-[280px] shadow-lg bg-white"
             />
           );
         })}

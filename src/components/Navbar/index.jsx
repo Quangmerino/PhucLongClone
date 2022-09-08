@@ -54,39 +54,45 @@ function Navigation() {
   );
 }
 
-function NavigationMobile() {
+function NavigationMobile(onClick) {
   return (
-    <ul className="nav__mobile">
-      {navigations.map((item, index) => {
-        return (
-          <li key={index}>
-            <Link to={item.path} className="nav__mobile--item">
-              {item.name}
-            </Link>
-            {/* {item.sub_menu && item.sub_menu.length > 0 && 
+    <div className="fixed z-50 bg-blend-screen bg-white h-screen ">
+      <ul className="nav__mobile">
+        {navigations.map((item, index) => {
+          return (
+            <li key={index}>
+              <Link to={item.path} className="nav__mobile--item">
+                {item.name}
+              </Link>
+              {item.sub_menu && item.sub_menu.length > 0 && (
                 <ul class="sub-menu">
                   {item.sub_menu.map((item, index) => {
                     return (
                       <li className="sub-menu__item">
-                        <Link key={index} to={item.path} className="">
+                        <Link 
+                          key={index} 
+                          to={item.path}
+                          // onClick={onClick}
+                        >
                           {item.name}
                         </Link>
                       </li>
                     );
                   })}
                 </ul>
-              } */}
-          </li>
-        );
-      })}
-      <div className="flex flex-col items-start gap-4">
-        <ButtonCustom className="nav__mobile--button" name="VN" />
-        <ButtonCustom
-          className="border-gray-400 border rounded-md px-2"
-          name="EN"
-        />
-      </div>
-    </ul>
+              )}
+            </li>
+          );
+        })}
+        <div className="flex items-start p-3 gap-4">
+          <ButtonCustom className="nav__mobile--button" name="VN" />
+          <ButtonCustom
+            className="border-gray-400 border rounded-md px-2"
+            name="EN"
+          />
+        </div>
+      </ul>
+    </div>
   );
 }
 

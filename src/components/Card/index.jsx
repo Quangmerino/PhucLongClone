@@ -2,7 +2,7 @@ import TitlePage from "../Title";
 
 function CardComponent({ img, title, des, backgroundImage, styleProduct, styleBackground ,children}) {
   return (
-    <div className={`flex flex-col gap-10 md:flex-row lg:gap-10 xl:gap-20 ${styleProduct}`}>
+    <div className={`flex flex-col py-6 gap-10 md:flex-row lg:gap-10 xl:gap-20 ${styleProduct}`}>
       <div className="flex justify-center basis-full bg-no-repeat items-center md:basis-1/2" style={{background: `${backgroundImage} center no-repeat`, backgroundSize: "contain"}}>
         <img className={`object-cover ${styleBackground || "" }`} src={`${img}`} alt={title} />
       </div>
@@ -18,7 +18,7 @@ function CardComponent({ img, title, des, backgroundImage, styleProduct, styleBa
 function CardProduct({image, className, classNameChild, children}) {
   return (
     <div className={className}>
-      <img src={image} className="object-cover w-full h-[220px]" alt="product-images" />
+      <img src={image} className="object-contain md:object-cover w-full h-[250px] md:h-[220px]" alt="product-images" />
       <div className={classNameChild}>
         {children}
       </div>

@@ -11,7 +11,6 @@ import AboutPage from "./pages/About";
 import CardPage from "./pages/Card";
 import MessageUs from "./components/MessageUs";
 import CallUs from "./components/CallUs";
-import BackToTop from "./components/BackToTop";
 import RecruitPage from "./pages/Recruit";
 
 function App() {
@@ -34,7 +33,6 @@ function App() {
       <Footer />
       <MessageUs/>
       <CallUs/>
-      <BackToTop/>
     </div>
   );
 }

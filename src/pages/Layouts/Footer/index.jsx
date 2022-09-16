@@ -8,7 +8,6 @@ import {
   YoutubeOutlined,
 } from "@ant-design/icons";
 import { info } from "../../../data";
-import BackToTop from "../../../components/BackToTop";
 
 export default function Footer() {
   return (
@@ -83,7 +82,6 @@ export default function Footer() {
             </a>
           </div>
         </div>
-        <BackToTop/>
       </div>
       <div className="bg-black flex justify-center py-1">
         <span className="text-gray-400">

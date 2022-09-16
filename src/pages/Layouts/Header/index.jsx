@@ -5,17 +5,46 @@ import { Link } from "react-router-dom";
 import ButtonCustom from "../../../components/ButtonComponent";
 import { MenuOutlined, ShoppingCartOutlined } from "@ant-design/icons";
 import { useState } from "react";
+import ModalCustom from "../../../components/Modal";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const [show, setShow] = useState(false);
+
+  const dataForm = [
+    {
+      type: "text",
+      placeholder: "First name",
+    },
+    {
+      type: "text",
+      placeholder: "Last name",
+    },
+    {
+      type: "text",
+      placeholder: "Email or phone number",
+    },
+    {
+      type: "password",
+      placeholder: "Your password",
+    },
+    {
+      type: "password",
+      placeholder: "Your password",
+    },
+  ];
+
   return (
     <div className="fixed top-0 right-0 left-0 z-10 bg-white shadow-2xl">
       <div className="flex justify-between items-center py-4 h-[60px] md:h-[80px] px-3 sm:px-10 md:px-24 lg:px-28 xl:px-32 2xl:px-40">
-        <ButtonCustom
-          className="flex md:hidden"
-          onClick={() => setOpen(!open)}
-          icon={<MenuOutlined style={{ fontSize: "24px" }} />}
-        />
+        <div >
+          <ButtonCustom
+            className="flex md:hidden"
+            onClick={() => setOpen(!open)}
+            icon={<MenuOutlined style={{ fontSize: "24px" }} />}
+          />
+          {open ? <NavigationMobile setOpen={setOpen} /> : null}
+        </div>
         <div className="hidden md:flex hover:motion-safe:animate-bounce">
           <Link to="/">
             <img className="" src="./images/delivery.png" alt="delivery" />
@@ -29,10 +58,36 @@ export default function Header() {
             styleName="hidden lg:flex"
             icon={<ShoppingCartOutlined style={{ fontSize: "20px" }} />}
           />
-          <ButtonComponent
-            className="font-bold text-green-700"
-            name="Đăng nhập"
-          />
+          <div>
+            <ButtonComponent
+              className="font-bold text-green-700"
+              name="Đăng nhập"
+              onClick={() => {
+                setShow(!show);
+              }}
+            />
+            {show ? (
+              <ModalCustom setShow={setShow} name="Register">
+                <form className="flex flex-col gap-3">
+                  {dataForm.map((item, index) => {
+                    return (
+                      <input
+                        type={item.type}
+                        placeholder={item.placeholder}
+                        className="input w-full px-2 border outline-none rounded-md h-10"
+                      />
+                    );
+                  })}
+                  <ButtonCustom
+                    className="py-1.5 px-3"
+                    name="Register"
+                    styleName="text-white"
+                    onClick={() => {}}
+                  />
+                </form>
+              </ModalCustom>
+            ) : null}
+          </div>
           <div className="hidden md:flex items-center">
             <ButtonComponent
               className="border-r-2 border-green-700 pr-2 text-green-700"
@@ -42,9 +97,6 @@ export default function Header() {
           </div>
         </div>
       </div>
-      {open ? <NavigationMobile 
-                // onClick={setOpen(!open)}
-              /> : null}
       <Navigation />
     </div>
   );

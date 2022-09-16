@@ -12,8 +12,27 @@ import CardPage from "./pages/Card";
 import MessageUs from "./components/MessageUs";
 import CallUs from "./components/CallUs";
 import RecruitPage from "./pages/Recruit";
+import { useEffect, useState } from "react";
+import BackToTop from "./components/BackToTop"
 
 function App() {
+
+  const [show, setShow] = useState(false);
+
+  useEffect(() =>{
+    const handleScroll = () => {
+      if (window.scrollY >= 600) {
+        setShow(true)
+      } else {
+        setShow(false)
+      }
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  },[])
+
   return (
     <div className="overflow-hidden">
       <Header />
@@ -33,6 +52,9 @@ function App() {
       <Footer />
       <MessageUs/>
       <CallUs/>
+      {
+        show && <BackToTop/>
+      }
     </div>
   );
 }

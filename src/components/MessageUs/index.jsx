@@ -13,7 +13,7 @@ export default function MessageUs() {
   return (
     <>
       <ButtonCustom
-        className="p-4 fixed right-4 z-50 bottom-1/4 bg-sky-500 flex items-center rounded-full animate-bounce md:right-10"
+        className="p-4 fixed right-4 z-40 bottom-1/4 bg-sky-500 flex items-center rounded-full animate-bounce md:right-10"
         icon={
           <MessageOutlined
             className="text-white"
@@ -23,7 +23,7 @@ export default function MessageUs() {
         onClick={() => setOpen(!open)}
       />
       {open ? (
-        <div className="fixed bottom-0 right-0 flex flex-col gap-3 rounded-t-2xl shadow-lg bg-white md:rounded-2xl py-8 px-4 md:shadow-2xl z-50 md:w-[355px] md:right-24 md:bottom-1/4">
+        <div className="fixed left-0 bottom-0 right-0 flex flex-col gap-3 rounded-t-2xl shadow-lg py-8 px-4 bg-white md:rounded-2xl md:left-auto md:shadow-2xl z-50 md:w-[355px] md:right-24 md:bottom-1/4">
           <div className="flex justify-between">
             <img className="h-[30px]" src="./images/logo2.png" alt="" />
             <div className="flex gap-3 items-center relative">

@@ -13,7 +13,7 @@ export default function MessageUs() {
   return (
     <>
       <ButtonCustom
-        className="p-4 fixed right-4 z-40 bottom-1/4 bg-sky-500 flex items-center rounded-full animate-bounce md:right-10"
+        className="p-4 fixed right-4 z-[8] bottom-1/4 bg-sky-500 flex items-center rounded-full animate-bounce md:right-10"
         icon={
           <MessageOutlined
             className="text-white"

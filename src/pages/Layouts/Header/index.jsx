@@ -13,31 +13,31 @@ export default function Header() {
 
   const dataForm = [
     {
-      type: "text",
-      placeholder: "First name",
+      icon: "./svg/icon-personal.svg",
+      label: "Sử dụng email / Số điện thoại",
     },
     {
-      type: "text",
-      placeholder: "Last name",
+      icon: "./svg/icon-google.svg",
+      label: "Tiếp tục với Google",
     },
     {
-      type: "text",
-      placeholder: "Email or phone number",
+      icon: "./svg/icon-facebook.svg",
+      label: "Tiếp tục với Facebook",
     },
-    {
-      type: "password",
-      placeholder: "Your password",
-    },
-    {
-      type: "password",
-      placeholder: "Your password",
-    },
+    // {
+    //   icon: "password",
+    //   label: "Tiếp tục với gmail",
+    // },
+    // {
+    //   icon: "password",
+    //   label: "Confirm password",
+    // },
   ];
 
   return (
     <div className="fixed top-0 right-0 left-0 z-10 bg-white shadow-2xl">
       <div className="flex justify-between items-center py-4 h-[60px] md:h-[80px] px-3 sm:px-10 md:px-24 lg:px-28 xl:px-32 2xl:px-40">
-        <div >
+        <div>
           <ButtonCustom
             className="flex md:hidden"
             onClick={() => setOpen(!open)}
@@ -67,24 +67,36 @@ export default function Header() {
               }}
             />
             {show ? (
-              <ModalCustom setShow={setShow} name="Register">
-                <form className="flex flex-col gap-3">
+              <ModalCustom setShow={setShow} name="Chào mừng đến với Phúc Long">
+                <div className="flex flex-col gap-3 items-center">
                   {dataForm.map((item, index) => {
                     return (
-                      <input
-                        type={item.type}
-                        placeholder={item.placeholder}
-                        className="input w-full px-2 border outline-none rounded-md h-10"
-                      />
-                    );
+                      <button
+                        className="border rounded-full px-6 h-10 w-[320px] flex gap-8 items-center hover:bg-black hover:bg-opacity-10"
+                        key={index}
+                      >
+                        <img src={item.icon} alt=""/>
+                        <span>{item.label}</span>
+                      </button> 
+                    )
                   })}
-                  <ButtonCustom
-                    className="py-1.5 px-3"
-                    name="Register"
-                    styleName="text-white"
-                    onClick={() => {}}
-                  />
-                </form>
+                  <div>
+                    <span>Bạn chưa có tài khoản?</span>
+                    <ButtonCustom
+                      className="p-1.5 bg-white w-[120px] rounded-lg"
+                      name="Đăng kí"
+                      styleName="text-green-700 text-base"
+                      onClick={() => {}}
+                    />
+                  </div>
+                  <div className="text-center mt-8">
+                    <span>Việc bạn tiếp tục sử dụng trang web này đồng nghĩa bạn đồng ý với</span>
+                    <div>
+                      <Link className="underline decoration-solid" to="">Điều khoản sử dụng</Link>  
+                      <span> của chúng tôi.</span>
+                    </div>
+                  </div>
+                </div>
               </ModalCustom>
             ) : null}
           </div>

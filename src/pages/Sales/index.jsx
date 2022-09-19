@@ -1,3 +1,4 @@
+import { useState,useEffect } from "react";
 import { useTitle } from "../../hooks/useTitle";
 import Slide from "../../components/Slide";
 import Breadcrumbs from "../../components/Breadcrumbs";
@@ -7,14 +8,20 @@ import { EyeOutlined } from "@ant-design/icons";
 
 export default function SalePage() {
   useTitle("Khuyến mãi - Phúc Long Coffee & Tea");
+
+  const [sales, setSales] = useState([]);
+  
+  useEffect(()=>{
+    setSales(dataSale);
+  },[])
   return (
     <>
       <Slide />
       <div className="">
         <Breadcrumbs breadcrumbs="Khuyến mãi" />
         <div className="row">
-        <div className="grid grid-cols-1 gap-y-8 py-16 md:grid-cols-2 md:gap-10 md:px-10 lg:grid-cols-3 xl:grid-cols-4">
-          {dataSale.map((item, index) => {
+        <div className="grid grid-cols-1 gap-y-8 md:grid-cols-2 md:gap-10 lg:py-16 lg:grid-cols-3 xl:grid-cols-4">
+          {sales.map((item, index) => {
             return (
               <CardProduct
                 key={index}

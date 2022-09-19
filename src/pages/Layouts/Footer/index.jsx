@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import ButtonCustom from "../../../components/ButtonComponent";
 import ButtonComponent from "../../../components/ButtonComponent";
@@ -8,8 +9,14 @@ import {
   YoutubeOutlined,
 } from "@ant-design/icons";
 import { info } from "../../../data";
-
 export default function Footer() {
+
+  const [email, setEmail] = useState('');
+
+  // useEffect((e)=>{
+  //   setEmail(e.target.value);
+  // })
+
   return (
     <>
       <div className="relative grid grid-cols-1 gap-10 py-8 px-3 md:px-10 lg:grid-cols-3 xl:px-20">
@@ -27,7 +34,9 @@ export default function Footer() {
           <span className="font-bold">Đăng ký nhận tin khuyến mãi</span>
           <div className="flex gap-1">
             <input
-              type="text"
+              type="email"
+              value={email}
+              onChange={(e)=> setEmail(e.target.value)}
               placeholder="Nhập địa chỉ email"
               className="py-1 px-4 border text-black border-green-700 outline-none rounded-md"
             />

@@ -1,18 +1,25 @@
+import { useState,useEffect } from "react";
+import { useTitle } from "../../hooks/useTitle";
 import { EyeOutlined } from "@ant-design/icons";
 import Breadcrumbs from "../../components/Breadcrumbs";
 import { CardProduct } from "../../components/Card";
 import ButtonCustom from "../../components/ButtonComponent";
-
 import { dataRecruit } from "../../data";
 
 function RecruitPage() {
+  useTitle('Tuyển dụng - Phúc Long Coffee & Tea')
+  const [recruits, setRecruits] = useState([]);
+  
+  useEffect(()=>{
+    setRecruits(dataRecruit);
+  },[])
   return (
     <div>
       <img src="./images/recruit.png" alt="recruit-banner" />
       <Breadcrumbs breadcrumbs="Tuyển dụng" />
       <div className="row">
-        <div className="grid grid-cols-1 gap-y-8 py-16 md:grid-cols-2 md:gap-10 md:px-10 lg:grid-cols-3 xl:grid-cols-4">
-          {dataRecruit.map((item, index) => {
+        <div className="grid grid-cols-1 gap-y-8 md:grid-cols-2 md:gap-10 lg:py-16 lg:grid-cols-3 xl:grid-cols-4">
+          {recruits.map((item, index) => {
             return (
               <CardProduct
                 key={index}

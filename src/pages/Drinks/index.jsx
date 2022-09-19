@@ -1,4 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
+import { useState, useEffect } from "react";
 import ButtonCustom from "../../components/ButtonComponent";
 import { CardProduct } from "../../components/Card";
 import HeaderContent from "../../components/HeaderContent";
@@ -8,6 +9,12 @@ import { useTitle } from "../../hooks/useTitle";
 
 export default function DrinkPage() {
   useTitle("Thức uống - Phúc Long Coffee & Tea");
+  const [drinks, setDrinks] = useState([]);
+  // const [pagination, setPagination] = useState(1);
+
+  useEffect(()=>{
+    setDrinks(dataDrinks)
+  },[])
 
   return (
     <div className="">
@@ -18,7 +25,7 @@ export default function DrinkPage() {
       />
       <div className="row">
         <div className="grid grid-cols-1 gap-y-8 py-16 md:grid-cols-2 md:gap-10 lg:grid-cols-3 xl:grid-cols-4">
-          {dataDrinks.map((item, index) => {
+          {drinks.map((item, index) => {
             return (
               <CardProduct
                 key={index}

@@ -2,9 +2,17 @@ import { useTitle } from "../../hooks/useTitle";
 import HeaderContent from "../../components/HeaderContent";
 import { CardComponent } from "../../components/Card";
 import { dataProduct } from "../../data";
+import { useState, useEffect } from "react";
 
 export default function ProductPage() {
   useTitle("Phúc Long Coffee & Tea House");
+
+  const [products, setProducts] = useState([]);
+
+  useEffect(()=>{
+    setProducts(dataProduct);
+  },[])
+
   return (
     <>
       <HeaderContent
@@ -13,7 +21,7 @@ export default function ProductPage() {
         title="SẢN PHẨM"
       />
       <div className="py-14">
-        {dataProduct.map((item, index) => {
+        {products.map((item, index) => {
           return (
             <CardComponent
               backgroundImage="url('./images/bg_category_tea.png')"

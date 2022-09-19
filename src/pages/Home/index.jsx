@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { useTitle } from "../../hooks/useTitle";
 import Slide from "../../components/Slide";
 import Title from "../../components/Title";
@@ -8,6 +9,13 @@ import { Link } from "react-router-dom";
 
 export default function HomePage() {
   useTitle("Phúc Long Coffee & Tea");
+
+  const [stores, setStores] = useState([]);
+
+  useEffect(()=>{
+    setStores(dataStore);
+  },[])
+
   return (
     <div className="w-full">
       <Slide />
@@ -60,7 +68,7 @@ export default function HomePage() {
             />
           </div>
           <div className="flex flex-col gap-4 mt-10 w-full overflow-auto h-[300px]">
-            {dataStore.map((item, index) => {
+            {stores.map((item, index) => {
               return (
                 <div
                   key={index}

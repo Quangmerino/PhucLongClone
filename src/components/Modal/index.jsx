@@ -1,5 +1,5 @@
 function ModalCustom(props) {
-  const { name, children, setShow, logo } = props;
+  const { name, children, setShow } = props;
 
   return (
     <>

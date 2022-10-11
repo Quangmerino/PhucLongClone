@@ -10,6 +10,9 @@ import ModalCustom from "../../../components/Modal";
 export default function Header() {
   const [open, setOpen] = useState(false);
   const [show, setShow] = useState(false);
+  const [name, setName] = useState("Chào mừng đến với Phúc Long")
+  const [title, setTitle] = useState("Đăng kí");
+  const [subTitle, setSubTitle] = useState("Bạn chưa có tài khoản?")
 
   const dataForm = [
     {
@@ -24,16 +27,7 @@ export default function Header() {
       icon: "./svg/icon-facebook.svg",
       label: "Tiếp tục với Facebook",
     },
-    // {
-    //   icon: "password",
-    //   label: "Tiếp tục với gmail",
-    // },
-    // {
-    //   icon: "password",
-    //   label: "Confirm password",
-    // },
   ];
-
   return (
     <div className="fixed top-0 right-0 left-0 z-10 bg-white shadow-2xl">
       <div className="flex justify-between items-center py-4 h-[60px] md:h-[80px] px-3 sm:px-10 md:px-24 lg:px-28 xl:px-32 2xl:px-40">
@@ -67,7 +61,7 @@ export default function Header() {
               }}
             />
             {show ? (
-              <ModalCustom setShow={setShow} name="Chào mừng đến với Phúc Long">
+              <ModalCustom setShow={setShow} name={name}>
                 <div className="flex flex-col gap-3 items-center">
                   {dataForm.map((item, index) => {
                     return (
@@ -81,12 +75,17 @@ export default function Header() {
                     )
                   })}
                   <div>
-                    <span>Bạn chưa có tài khoản?</span>
+                    <span>{subTitle}</span>
                     <ButtonCustom
                       className="p-1.5 bg-white w-[120px] rounded-lg"
-                      name="Đăng kí"
+                      name={title}
                       styleName="text-green-700 text-base"
-                      onClick={() => {}}
+                      onClick={() => 
+                      {
+                        title === "Đăng kí" ? setTitle("Đăng nhập") : setTitle("Đăng kí")
+                        name === "Chào mừng đến với Phúc Long" ? setName("Đăng kí tài khoản Phúc Long") : setName("Chào mừng đến với Phúc Long")
+                        subTitle === "Bạn chưa có tài khoản?" ? setSubTitle("Bạn đã có tài khoản?") : setSubTitle("Bạn chưa có tài khoản?")
+                      }}
                     />
                   </div>
                   <div className="text-center mt-8">

@@ -1,21 +1,28 @@
+import { useEffect } from "react";
 import { useState } from "react";
 
-export default function TabsCustom({ tabs }) {
+export default function TabsCustom({ tabs, children }) {
   const [tabName, setTabName] = useState(tabs[0]);
-  const [type, setType] = useState();
+  const [tabContent, setTabContent] = useState(tabs[0]);
+
+  useEffect(()=>{
+    setTabContent(tabContent);
+  },[tabContent])
+
   return (
     <div>
-      {tabs.map((tab, index) => {
+      {tabName.map((tab, index) => {
         return (
           <button 
             key={index} 
-            onClick={() => setType(tab)}
-            className={`${type === tab ? "active" : ''}`}
+            onClick={() => setTabName(tab)}
+            className={`${tabContent === tab ? "active:text-white active:bg-green-700" : ''}`}
           >
-            {tab}
+            {tab.name}
           </button>
         );
       })}
+      {children}
     </div>
   );
 }

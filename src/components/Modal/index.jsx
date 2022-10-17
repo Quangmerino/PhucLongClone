@@ -10,7 +10,7 @@ function ModalCustom(props) {
         }}
       />
       <div 
-        className="fixed modal-box left-4 right-4 top-[10%] bottom-[10%] rounded-xl bg-white shadow-2xl overflow-hidden z-50 md:top-[15%] md:bottom-[15%] md:left-1/4 md:right-1/4 lg:left-56 lg:right-56 xl:left-1/4 xl:right-1/4"
+        className="fixed modal-box left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-xl bg-white shadow-2xl overflow-hidden z-50"
       >
         <div className="flex flex-col items-center p-5 md:px-10 gap-6">
           <img className="w-[80px]" src="./images/logo2.png" alt=""/>

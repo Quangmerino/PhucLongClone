@@ -17,8 +17,8 @@ function CardComponent({ img, title, des, backgroundImage, styleProduct, styleBa
 
 function CardProduct({image, className, classNameChild, children}) {
   return (
-    <div className={className}>
-      <img src={image} className="object-contain md:object-cover w-full h-[250px] md:h-[220px]" alt="product-images" />
+    <div className={`${className} cursor-pointer`}>
+      <img src={image} className="object-contain w-full h-[250px] md:h-[220px]" alt="product-images" />
       <div className={classNameChild}>
         {children}
       </div>
